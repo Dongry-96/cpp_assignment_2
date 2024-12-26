@@ -70,7 +70,7 @@ public:
 	unique_ptr<Animal> CreateRandomAnimal()
 	{
 		int RandomNumber = rand() % 4;
-		
+
 		switch (RandomNumber)
 		{
 		case 0: return make_unique<Dog>();
@@ -85,6 +85,8 @@ public:
 
 int main()
 {
+	srand(time(0));
+
 	Zoo zoo;
 	zoo.AddAnimal(zoo.CreateRandomAnimal());
 	zoo.AddAnimal(zoo.CreateRandomAnimal());
@@ -93,5 +95,5 @@ int main()
 	zoo.AddAnimal(zoo.CreateRandomAnimal());
 
 	zoo.PerformAction();
-	
+
 }
