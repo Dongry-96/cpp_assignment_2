@@ -88,11 +88,11 @@ int main()
 	srand(time(0));
 
 	Zoo zoo;
-	zoo.AddAnimal(zoo.CreateRandomAnimal());
-	zoo.AddAnimal(zoo.CreateRandomAnimal());
-	zoo.AddAnimal(zoo.CreateRandomAnimal());
-	zoo.AddAnimal(zoo.CreateRandomAnimal());
-	zoo.AddAnimal(zoo.CreateRandomAnimal());
+
+	for (int i = 0; i < 5; i++)
+	{
+		zoo.AddAnimal(zoo.CreateRandomAnimal());
+	}
 
 	zoo.PerformAction();
 
